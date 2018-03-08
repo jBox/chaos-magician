@@ -1,0 +1,42 @@
+{
+  "name": "chaos-magician",
+  "version": "1.0.0",
+  "description": "chaos-magician module for universe redux app",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "npm run build",
+    "clean": "del-cli lib/**",
+    "build": "npm run clean && cross-env NODE_ENV=production babel src --out-dir lib",
+    "dev": "npm run clean && cross-env NODE_ENV=dev babel src --watch --out-dir lib"
+  },
+  "author": "Mars",
+  "license": "ISC",
+  "dependencies": {
+    "redux-dispatch-monitor": "^1.0.5",
+    "url": "^0.11.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "cross-env": "^4.0.0",
+    "del-cli": "^0.2.1"
+  },
+  "peerDependencies": {
+    "history": "^4.6.1",
+    "prop-types": "^15.6.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-redux": "^5.0.6",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-browser-router": "^2.0.3",
+    "redux": "^3.7.2"
+  },
+  "files": [
+    "lib"
+  ]
+}
